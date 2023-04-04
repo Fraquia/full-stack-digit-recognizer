@@ -1,4 +1,5 @@
 MNIST/
+data/
 lightning_logs/
 
 
