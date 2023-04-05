@@ -1,29 +1,16 @@
-import io
 
 import torchvision.transforms as transforms
-from PIL import Image
-import numpy as np
 import os
-
-import numpy as np
-import pandas as pd
-import seaborn as sn
 import torch
-from IPython.core.display import display
 from pytorch_lightning import LightningModule, Trainer
 from pytorch_lightning.callbacks.progress import TQDMProgressBar
-from pytorch_lightning.loggers import CSVLogger
-from torch import nn
 from torch.nn import functional as F
-from torch.utils.data import DataLoader, random_split
-from torchmetrics import Accuracy
+from torch.utils.data import DataLoader
 from torchvision import transforms
 from torchvision.datasets import MNIST
 
 from torchvision import models
-import json
 import torch
-import torchvision
 
 
 PATH_DATASETS = os.environ.get("PATH_DATASETS", "./data")
@@ -59,6 +46,8 @@ if __name__ == '__main__':
         devices=1 ,  # limiting got iPython runs
         max_epochs=3,
         callbacks=[TQDMProgressBar(refresh_rate=20)],
+        default_root_dir='src'
+        
     )
 
     # Train the model ⚡
