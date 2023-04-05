@@ -12,10 +12,8 @@
 
 flask app : https://medium.com/thedevproject/start-using-env-for-your-flask-project-and-stop-using-environment-variables-for-development-247dc12468be
 
-docker deploy in the hub https://www.youtube.com/watch?v=zGP_nYmZd9c&t=0s
 
+To buil docker:
 
-
-Run the web app:
-
+- cd src
 - docker compose up --build
